@@ -1,0 +1,32 @@
+{
+  "name": "bilive-recorder",
+  "version": "0.0.1",
+  "description": "A NodeJS based recorder for capturing and saving bilibili livestream",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "eslint .",
+    "fix": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.tzhongyan.com:tzhongyan/bilive-recorder.git"
+  },
+  "keywords": [
+    "bilibili",
+    "bilibili-live",
+    "recorder"
+  ],
+  "author": "tzhongyan",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "8",
+    "eslint": "4.x",
+    "eslint-config-google": "^0.9.1"
+  },
+  "dependencies": {
+    "download-file": "^0.1.5",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2"
+  }
+}

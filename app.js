@@ -1,4 +1,5 @@
 const recorder = require('./lib/recorder');
+const tool = require('./lib/tool');
 
 // Using arguments
 let args = process.argv.slice(2);
@@ -15,7 +16,16 @@ if (args.length < 1) {
                 + 'has to be greater than 0');
         } else {
             console.log(`Room ID = ${id}`);
-            recorder.run(id);
+            runRecorder(id);
         }
     });
+}
+
+/**
+ * Runs recorder using long id
+ * @param {Number} id
+ */
+async function runRecorder(id) {
+    let longId = await tool.getLongId(id);
+    recorder.run(id, longId);
 }
